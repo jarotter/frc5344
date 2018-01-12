@@ -48,7 +48,7 @@ inicializan un arreglo? En Java, `new` es una palabra clave que crea un
 objeto de cierta clase. Para ver cómo funciona, abajo les doy el código de una
 clase `Mesa` con algunos métodos y atributos.
 
-```
+```Java
 public class MesaRectangular{
 
    //Atributos
@@ -108,7 +108,7 @@ La palabra mágica `new` es la que nos permite instanciar un objeto de la clase.
 Por ejemplo, en el código de abajo **importamos** la clase Mesa para poder
 usarla y creamos dos objetos de tipo Mesa.
 
-```
+```Java
 import MesaRectangular;
 
 public class EjecutableMesa{
@@ -161,7 +161,7 @@ por lo tanto tienes acceso a ella.
 
  Para resolver el primer problema, implementamos la clase Mesa abajo
 
- ```
+ ```Java
  public class Mesa{
 
     //Atributos
@@ -186,9 +186,9 @@ por lo tanto tienes acceso a ella.
 
  }
  ```
-Y ahora las subclases (perdonen la aproximación burda de π)
+Y ahora las subclases (perdonen la aproximación burda de $\pi$)
 
-```
+```Java
 public class MesaCircular extends Mesa{
 
    //Atributos
@@ -211,7 +211,7 @@ public class MesaCircular extends Mesa{
 }
 ```
 
-```
+```Java
 public class MesaRectangular extends Mesa{
 
    //Atributos
@@ -248,7 +248,8 @@ y atributos de ella.
 
 Para corroborar que efectivamente solucionamos el primer problema, prueba el
 siguiente código:
-```
+
+```Java
 import MesaCircular;
 import MesaRectangular;
 

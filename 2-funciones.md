@@ -4,13 +4,19 @@ Antes de empezar, aprendan que es buena práctica evitar acentos y la letra ñ e
 el código lo más posible. (Por molesto que sea leer algo con mala ortografía).
 
 ## Jerarquía de operaciones
-En Java podemos hacer fácilmente las operaciones
+En Java podemos hacer fácilmente las operaciones como sumar, restar, multiplicar
+y dividir. Después veremos cómo hacer cosas más complicadas como raíces, potencias
+y logaritmos, pero me interesa que sepan desde ahora que existe una
+**jerarquía de operaciones**, un orden en el que la computadora realiza
+las operaciones. En españól, la sigla es PEMDSR: paréntesis, exponentes, multiplicar
+y dividir (de izquierda a derécha) y finalmente sumar y restar (de izquierda a
+derecha). Por ejemplo $5 \times 2 + 3 = 13$ pero $5 \times (2+3) = 25$.
 
 ## Estructura de una función
 Hasta ahora sólo han hecho códigos cortos que siempre escribían dentro
 de un archivo misterioso como el de abajo
 
-```
+```Java
 public class NombreDeLaClase{
 
   public static void main(String[] args){
@@ -31,7 +37,7 @@ de alguna manera con esos parámetros.
 Abajo les pongo ejemplo de dos funciones sencillas para empezar a analizar
 la sintaxis de Java, una de las cuales hicieron ustedes en clase:
 
-```
+```Java
 public static double max(double x, double y){
   return x > y ? x : y;
 }
@@ -72,7 +78,7 @@ Esto debeen leerlo como "Si se cumple 'condición' el valor es valorVerdadero; s
 el valor es valorFalso". Por ejemplo, el siguiente código imprime si un número
 entero `n` es par o impar
 
-```
+```Java
 String esPar = x % 2 == 0 ? "par" : "impar";
 System.out.println(esPar);
 
@@ -87,7 +93,7 @@ Realmente la función no hace más que imprimir, así que no hay una variable qu
 regrese. A estas funciones las llamamos de tipo **void**, que significa "no
 regresa nada". La función entonces se vería así:
 
-```
+```Java
 public static void muestraParidad(int x){
   String esPar = x % 2 == 0 ? "par" : "impar";
   System.out.println(esPar);
@@ -107,7 +113,7 @@ una función llamada `main` que no regresa nada. Después volvemos a public y
 a static. Si ustedes extienden la clase Fibonacci que hicimos en clase para
 que se vea así
 
-```
+```Java
 public class Fibonacci{
   public static int nesimoFibonacci(int n){
     int a[] = new int[n];
@@ -176,7 +182,8 @@ procesos recursivos). Las variables que se inicializan dentro de la función
 pequeña reciben el nombre de **locales**, pues sólo existen dentro del código
 de esa función, y por lo tanto sólo mientras se ejecuta. Ustedes ya aprovecharon
 este fenómeno sin darse cuenta. Recordemos que la sintaxis de un ciclo `for`es
-```
+
+```Java
 for(int i = a; i < n; i++){
   //hacer algo
 }
@@ -187,7 +194,7 @@ una variable local que desaparece cuando finaliza el ciclo. Para entender mejor
 este fenómeno, copia y pega el siguiente código dentro del `main` de alguna clase
 (o mejor, hazlo una función void y llámala desde `main`).
 
-```
+```Java
 int i = 0;
 while(i<5){
   System.out.println(i);
@@ -229,7 +236,7 @@ Recuerda que el nombre completo de `main` es public static void main(String[] ar
 4. Supón que se ejecutan los siguientes bloques de código. ¿Qué imprime la
 consola en cada caso? Intenta hacerlo en tu mente.
 
-```
+```Java
 public class Ejercicio4{
 
   public static double f(double x, double y){

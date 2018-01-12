@@ -9,7 +9,7 @@ Vimos que hay varios tipos de **variable** en Java:
 explico cuántos números podemos representar en la computadora y cómo se hace);
 
 * `boolean` para variables booleanas (les recuerdo que usamos notación de
-lógico, ⊤ para verdadero y ⊥ para falso)
+lógico, $\top$ para verdadero y $\bot$ para falso)
 
 * `String` para cadenas de texto (énfasis en
 la S mayúscula, les explico cuando veamos programación orientada a objetos).
@@ -57,7 +57,7 @@ fila i, columna j como $A_{i,j}$  en matemático y como `a[i][j]` en Java.
 
 Instanciar un arreglo también se hace en dos pasos:
 
-```
+```Java
   int[] a;
   a = new int[n];
 ```
@@ -81,7 +81,7 @@ distinto. Por ejemplo, supongan que queremos ver si un número `x` es negativo.
 Si es negativo, queremos multiplicarlo por dos, y si no, multiplicarlo
 por tres.
 
-```
+```Java
 if(x < 0){
   x = x*2;
 } else{
@@ -103,7 +103,7 @@ Si `x`es negativo, queremos hacer lo mismo con los casos negativo y positivo,
 pero si es cero queremos sumarle uno. En esta situación, podemos usar dos
 bloques `if` como sigue:
 
-```
+```Java
 if(x < 0){
   x = x*2;
 } else{
@@ -128,7 +128,7 @@ programarlo con muchos bloques `if` anidados, pero siempre que tengan una
 pregunta de este estilo Java tiene una estructura para hacerlo: `swich`.
 En el ejemplo de arriba, el código se vería así:
 
-```
+```Java
 switch(x % 4){
   case 0:
     //aquí hacemos algo;
@@ -166,7 +166,7 @@ la condición de ser par es lo mismo que pedir congruencia con cero módulo dos
 (o sea, que al dividir entre dos el residuo sea cero). El código para
 hacer esto es así (suponiendo que x es dado)
 
-```
+```Java
 while(x % 2 == 0){
   x = x/2;
 }
@@ -183,7 +183,7 @@ las llaves. Por ejemplo, supongan que tenemos un arreglo `a` de tamaño `n` y
 queremos imprimir cada elemento del arreglo. Necesitamos imprimir _algo_
 exactamente `n` veces. El código en Java es así:
 
-```
+```Java
 for(int i = 0; i < n; i++){
   System.out.println(a[i])
 }
@@ -194,7 +194,7 @@ un entero `i=0`. Este iterador se va a ir recorriendo (por eso el `i++`)
 y se ejecuta lo que está dentro de las llaves siempre que se satisfaga la
 condición `i < n`. Entonces, el bloque de arriba es equivalente al siguiente:
 
-```
+```Java
 int i = 0;
 while(i < n){
   System.out.println(a[i]);
@@ -212,7 +212,8 @@ en clase.
 
 3. Para hacer una matriz en Java, la sintaxis es similar a la de un arreglo,
 pero necesitan dos pares de corchetes, uno para cada dimensión. Por ejemplo,
-```
+
+```Java
 int[][] a;
 a = new int[5][10];
 
