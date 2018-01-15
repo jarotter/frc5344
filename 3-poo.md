@@ -257,7 +257,7 @@ de Mesa_ y por lo tanto hereda todas las cosas que Mesa tenía. Con más detalle
 Cualquier objeto que declaremos de tipo MesaRectangular o de tipo MesaCircular
 tendrán todos los atributos y los métodos de la clase Mesa. Noten que el
 constructor vacío ahora no es tan vacío (por eso prefiero constructor trivial)
-y llama a un método `super`. `super` es el constructor de la **superclase**,
+y llama a un método `super()`. `super()` es el constructor de la **superclase**,
 o sea, la clase a la que extendemos, y de ahí es que se heredan los métodos
 y atributos de ella.
 
