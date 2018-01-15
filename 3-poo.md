@@ -134,7 +134,7 @@ las tiene que "escribir" porque tu año de nacimiento es información tuya, y
 por lo tanto tienes acceso a ella.
 
 
-## Encapsulación y herencia
+## Encapsulamiento y herencia
 
  Lo que acabamos de explicar es un concepto fundamental en la programación
  orientada a objetos. El término **encapsulamiento** engloba precisamente
@@ -146,6 +146,21 @@ por lo tanto tienes acceso a ella.
  Análogamente, el atributo `material` tiene un método `getAñosDeUso` para compartirle
  al mundo exterior la edad de la mesa, que de otra forma sería privada y
  por lo tanto inaccesible (ya casi llegamos a explicar público y privado).
+
+ Para acceder a los métodos y atributos de un objeto, usamos notación con un
+ punto. Por ejmplo, cuando han escrito `System.out.println()` están llamando
+ al método `println()` en `out` en la clase `System`. Otro ejemplo sería
+ en nuestro ejemplo de las mesas. En el `main` así instanciamos una mesa
+ y calculamos su área.
+
+ ```Java
+ public static void main(String[] args){
+
+  Mesa mesaComedor = new Mesa(5,10);
+  System.out.println(mesa.calcularArea());
+
+ }
+ ```
 
  Otro concepto fundamental en POO es el de **herencia**. Como ejemplo para entender
  mejor, retomemos el caso de la mesa. Nuestra clase modela una mesa rectangular,
